@@ -19,4 +19,16 @@ describe('#memoize', function() {
     assert.equal(sum(1, 2, 5), memoize(sum)(1, 2, 5));
   });
 
+  it('test dont call me twice', function() {
+    let hiddenSideEffect = 0;
+    let dontTellAnyone = (a, b) => {
+      hiddenSideEffect++;
+      return a + b;
+    };
+    let fn = memoize(dontTellAnyone);
+    assert.equal(4, fn(2, 2));
+    assert.equal(4, fn(2, 2));
+    assert.equal(1, hiddenSideEffect);
+  });
+
 });
