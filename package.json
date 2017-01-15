@@ -2,10 +2,21 @@
   "name": "memoize-js",
   "version": "1.0.0",
   "description": "Generate memoized versions of recursive functions",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
-  "author": "Luan",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luanpotter/memoize-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luanpotter/memoize-js/issues"
+  },
+  "homepage": "https://github.com/luanpotter/memoize-js",
+  "author": "Luan Nico",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
 }
