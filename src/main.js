@@ -1,5 +1,7 @@
 let memoize = (fn) => {
-  return fn;
+  return (...a) => {
+    return fn(...a);
+  };
 };
 
 module.exports = memoize;
